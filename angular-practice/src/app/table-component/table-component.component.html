@@ -1,0 +1,18 @@
+<table >
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Birthday</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let person of people">
+            <td>{{person.firstName | uppercase}} {{person.lastName | uppercase}}</td>
+            <td>{{person.email}}</td>
+            <td>{{person.birthday | date}}</td>
+
+        </tr>
+    </tbody>
+
+</table>
