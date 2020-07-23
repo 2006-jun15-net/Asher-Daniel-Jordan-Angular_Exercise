@@ -1,0 +1,26 @@
+<div>
+   <input type="radio" id="animalRadio" value="true" (click)="onAnimalClicked('true')">
+   <label for="animalRadio">Animals</label><br>
+   <input type="radio" id="colorRadio" value="color" (click)="onColorClicked('true')">
+   <label for="colorRadio">Colors</label><br>
+   <input type="radio" id="dayRadio" value="day" (click)="onDayClicked('true')">
+   <label for="dayRadio">Days</label><br>
+</div>
+
+<div>
+   <ul *ngIf="isAnimalSelected('true')">
+      <li *ngFor="let item of animals">
+         {{item}}
+      </li>
+   </ul>
+   <ul *ngIf="isColorSelected('true')">
+      <li *ngFor="let item of colors">
+         {{item}}
+      </li>
+   </ul>
+   <ul *ngIf="isDaySelected('true')">
+      <li *ngFor="let item of days">
+         {{item}}
+      </li>
+   </ul>
+</div>
